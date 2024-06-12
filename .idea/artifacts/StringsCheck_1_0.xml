@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="StringsCheck-1.0">
+    <output-path>$PROJECT_DIR$/out/artifacts/StringsCheck_1_0</output-path>
+    <root id="archive" name="StringsCheck-1.0.jar">
+      <element id="module-output" name="StringsCheck" />
+    </root>
+  </artifact>
+</component>
