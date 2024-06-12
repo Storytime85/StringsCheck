@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <name>StringsCheck</name>
-    <description>Read the file and group strings in it</description>
+    <description>Read the file and group up strings in it</description>
     <properties>
         <start-class>com.stringschecker.Main</start-class>
         <maven.compiler.source>11</maven.compiler.source>

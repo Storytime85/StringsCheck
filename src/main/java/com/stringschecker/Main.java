@@ -10,7 +10,7 @@ public class Main {
         final long startTime = System.nanoTime();
         FileManipulator fileManipulator;
 
-        try{
+        try {
             if (args.length >= 1) {
                 fileManipulator = new FileManipulator(new File(args[0]));
             } else {
@@ -30,7 +30,7 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        final double duration = (System.nanoTime() - startTime)/1000000000.0;
+        final double duration = (System.nanoTime() - startTime) / 1000000000.0;
         System.out.println("Программа исполнялась " + duration + " секунд.");
     }
 }

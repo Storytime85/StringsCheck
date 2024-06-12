@@ -8,16 +8,16 @@ import java.util.*;
 public class FileManipulator {
     static final String regex = "^(?!;)(;?\"\\d*+\")+$";
     private final FileReader reader;
-    private Set<String> filteredSetOfEntries;
+    private final Set<String> filteredSetOfEntries;
     private List<List<String>> resultList;
-
-    public Set<String> getFilteredSetOfEntries() {
-        return filteredSetOfEntries;
-    }
 
     public FileManipulator(File fileName) throws FileNotFoundException {
         reader = new FileReader(fileName);
         filteredSetOfEntries = new LinkedHashSet<>();
+    }
+
+    public Set<String> getFilteredSetOfEntries() {
+        return filteredSetOfEntries;
     }
 
     //Уникальных значений для входного файла 998578
@@ -27,12 +27,12 @@ public class FileManipulator {
             if (inputLine == null) {
                 throw new RuntimeException("File is empty");
             }
-            while (inputLine!= null) {
-                if (inputLine.matches(regex) ) {
+            while (inputLine != null) {
+                if (inputLine.matches(regex)) {
                     filteredSetOfEntries.add(inputLine);
                 }
                 inputLine = br.readLine();
-           }
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -86,7 +86,7 @@ public class FileManipulator {
             for (int i = 0; i < separatedStrings.length; i++) {
                 if (columns.size() == i)
                     columns.add(new HashMap<>());
-                if ("".equals(separatedStrings[i].replaceAll("\"","").trim()))
+                if ("".equals(separatedStrings[i].replaceAll("\"", "").trim()))
                     continue;
 
                 Map<String, Integer> currentColumn = columns.get(i);
