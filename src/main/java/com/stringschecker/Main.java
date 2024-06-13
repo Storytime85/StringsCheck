@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 
 public class Main {
     final static String outputFileName = "output.txt";
+    final static String defaultInputFileName = "lng.txt";
 
     public static void main(String[] args) {
         final long startTime = System.nanoTime();
@@ -14,7 +15,7 @@ public class Main {
             if (args.length >= 1) {
                 fileManipulator = new FileManipulator(new File(args[0]));
             } else {
-                fileManipulator = new FileManipulator(new File("lng.txt"));
+                fileManipulator = new FileManipulator(new File(defaultInputFileName));
             }
             fileManipulator.read();
             fileManipulator.findGroups();

@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.*;
 
 public class FileManipulator {
-    static final String regex = "^(?!;)(;?\"\\d*+\")+$";
+    static final String regex = "^(;?(\"\\d*+[.]?\\d*+\")?)+$";
     private final FileReader reader;
     private final Set<String> filteredSetOfEntries;
     private List<List<String>> resultList;
